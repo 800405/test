@@ -21,9 +21,7 @@ public class Main {
 
 		if (textList.size() > 3) {
 
-			/*
-			 * String date= textList.get(0); time.CalculateTime.minutesDiff(date, nowTime);
-			 */
+
 			Collections.sort(textList, Collections.reverseOrder());
 
 			int i = 0;
