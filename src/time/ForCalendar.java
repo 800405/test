@@ -3,14 +3,15 @@ package time;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class ForCalendar {
+public class ForCalendar extends TimeConfigurator {
 
-	public String getNowTimeForCalender() {
-		return getNowTimeForCalender("yyyy-MM-dd");
+	public static String getNowTimeForCalender() {
+		return getNowTimeForCalender(getDataFormat());
 	}
 
-	public String getNowTimeForCalender(String format) {
+	public static String getNowTimeForCalender(String format) {
 		Calendar calendar = Calendar.getInstance();
+
 		// SimpleDateFormatクラスでフォーマットパターンを設定する
 		SimpleDateFormat sdf = new SimpleDateFormat(format);
 		String nowTime = sdf.format(calendar.getTime());
