@@ -11,7 +11,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		String textFilePath = "";
+		String textFilePath = notManagedGIT.NotManagedGIT.getTimetextfilepath();
+
 		String nowTime = ForCalendar.getNowTimeForCalender();
 
 		TextFileWriter.textFileWriter(textFilePath, nowTime, true);
