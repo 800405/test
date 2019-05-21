@@ -1,15 +1,13 @@
-package testa;
+package ui;
 
 import java.awt.Color;
 import java.awt.Container;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class window extends JFrame {
-
 
 	public static void main(String[] args) {
 
@@ -24,25 +22,18 @@ public class window extends JFrame {
 		// ウィンドウを可視状態にする
 		frame.setVisible(true);
 
-
-
 	}
-	public window(String title){
 
-Calendar cl = Calendar.getInstance();
-
-        //SimpleDateFormatクラスでフォーマットパターンを設定する
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
-        String nowTime= sdf.format(cl.getTime());
+	public window(String title) {
 
 		JLabel lbl = new JLabel();
-		lbl.setText(nowTime+" 実行しました");
+		lbl.setText(" 実行しました");
 		// 背景色をオレンジに
 		lbl.setBackground(Color.ORANGE);
 		lbl.setOpaque(true);
 
-	    Container contentPane = getContentPane();
-	    contentPane.add(lbl);
-	  }
+		Container contentPane = getContentPane();
+		contentPane.add(lbl);
+	}
 
 }
