@@ -3,6 +3,7 @@ package test;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import file.BasicOperation;
 import file.TextFileReader;
 import file.TextFileWriter;
 import time.ForCalendar;
@@ -11,7 +12,6 @@ public class Main {
 
 	public static void main(String[] args) {
 
-
 		String textFilePath = notManagedGIT.NotManagedGIT.getTimetextfilepath();
 
 		String nowTime = ForCalendar.getNowTimeForCalender();
@@ -19,9 +19,7 @@ public class Main {
 		TextFileWriter.textFileWriter(textFilePath, nowTime, true);
 		ArrayList<String> textList = TextFileReader.textFileReader(textFilePath);
 
-
 		if (textList.size() > 3) {
-
 
 			Collections.sort(textList, Collections.reverseOrder());
 
@@ -38,9 +36,10 @@ public class Main {
 
 		textList = TextFileReader.textFileReader(textFilePath);
 		for (int i = 0; i < textList.size(); i++) {
-
 			System.out.println(textList.get(i));
 		}
+
+		BasicOperation.copyFile(textFilePath, textFilePath.replace(".txt", "") + nowTime+".txt");
 
 	}
 
